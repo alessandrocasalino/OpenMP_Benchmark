@@ -3,10 +3,10 @@
 
 #include <benchmark/benchmark.h>
 
+#define PI25DT 3.141592653589793238462643
+
 template <typename T, size_t Intervals = 100000000>
 class Pi_Value : public benchmark::Fixture {
-
-#define PI25DT 3.141592653589793238462643
 
 public:
 
