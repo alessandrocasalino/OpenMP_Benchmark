@@ -9,7 +9,7 @@ No dependencies are needed to be installed, as CMake (*minimum version 3.25*) do
 To build with CMake
 
 ```bash
-cmake - B build
+cmake -B build
 cd build
 make
 ```
