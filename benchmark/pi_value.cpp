@@ -12,7 +12,7 @@ public:
 
     long int intervals = Intervals;
 
-    double pi;
+    double pi {};
 
 };
 
@@ -24,7 +24,7 @@ BENCHMARK_TEMPLATE_DEFINE_F(Pi_Value, Double_1E5, double, 10000) (benchmark::Sta
     // Check num_threads
     // std::cout << "Using " << omp_get_num_threads() << " threads." << std::endl;
 
-    for (auto _ : state) {
+    for ([[maybe_unused]] auto _ : state) {
 
         sum = 0.0;
         dx = 1.0 / (double) intervals;
@@ -61,7 +61,7 @@ BENCHMARK_TEMPLATE_DEFINE_F(Pi_Value, Double_1E8, double, 100000000) (benchmark:
 
     double x, f, sum, dx;
 
-    for (auto _ : state) {
+    for ([[maybe_unused]] auto _ : state) {
 
         sum = 0.0;
         dx = 1.0 / (double) intervals;

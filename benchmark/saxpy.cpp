@@ -28,7 +28,7 @@ public:
 
 BENCHMARK_TEMPLATE_DEFINE_F(Saxpy, Double_256, double, 256) (benchmark::State& state) {
 
-    for (auto _ : state) {
+    for ([[maybe_unused]] auto _ : state) {
 
         auto nthreads = state.range(0);
 
@@ -54,7 +54,7 @@ BENCHMARK_REGISTER_F(Saxpy, Double_256)
 
 BENCHMARK_TEMPLATE_DEFINE_F(Saxpy, Double_512_3, double, 512*512*512) (benchmark::State& state) {
 
-    for (auto _ : state) {
+    for ([[maybe_unused]] auto _ : state) {
 
         auto nthreads = state.range(0);
 

@@ -1,7 +1,7 @@
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 #include <omp.h>
-#include <math.h>
+#include <cmath>
 
 #include <benchmark/benchmark.h>
 
@@ -32,7 +32,7 @@ BENCHMARK_TEMPLATE_DEFINE_F(Laplace2D, Double_4096, double, 4096) (benchmark::St
     // Check num_threads
     // std::cout << "Using " << omp_get_num_threads() << " threads." << std::endl;
 
-    for (auto _ : state) {
+    for ([[maybe_unused]] auto _ : state) {
 
         error = 1.0;
         iter = 0;
