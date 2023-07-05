@@ -1,5 +1,6 @@
 
 set(GBENCHMARK_DOWNLOAD_URL "https://github.com/google/benchmark/archive/refs/tags/v1.8.0.tar.gz" CACHE STRING "")
+set(GBENCHMARK_DOWNLOAD_URL_HASH "MD5=8ddf8571d3f6198d37852bcbd964f817" CACHE STRING "")
 
 if(DOWNLOAD_DEPS)
     message(STATUS "Downloading Google Benchmark from: ${GBENCHMARK_DOWNLOAD_URL}")
